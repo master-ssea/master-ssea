@@ -1,0 +1,41 @@
+{
+  "name": "university-app",
+  "version": "0.0.1",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && cp src/service-worker.js dist/service-worker.js && cp src/firebase-messaging-sw.js dist/firebase-messaging-sw.js && cp src/manifest.json dist/manifest.json && webpack-dev-server --content-base dist/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html && cp src/service-worker.js dist/service-worker.js && cp src/firebase-messaging-sw.js dist/firebase-messaging-sw.js && cp src/manifest.json dist/manifest.json"
+  },
+  "author": "Ardelean Calin (calin.ardelean@ro.bosch.com)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.18.1",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "firebase": "^4.8.2",
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^0.100.2",
+    "preact": "^8.2.7",
+    "preact-compat": "^3.17.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.2.0",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "^2.9.4",
+    "workbox-webpack-plugin": "^2.1.2"
+  }
+}
